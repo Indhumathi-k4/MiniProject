@@ -1,0 +1,15 @@
+<p>user-form works!</p>
+<h2>{{ user.id === 0 ? 'Add User' : 'Edit User' }}</h2>
+<form (ngSubmit)="saveUser()">
+  <label>Name:</label>
+  <input [(ngModel)]="user.name" name="name" required />
+
+  <label>Email:</label>
+  <input [(ngModel)]="user.email" name="email" required />
+
+  <label>Phone:</label>
+  <input [(ngModel)]="user.phone" name="phone" required />
+
+  <button type="submit">{{ user.id === 0 ? 'Add' : 'Update' }}</button>
+</form>
+
